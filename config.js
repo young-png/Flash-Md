@@ -13,18 +13,18 @@ function mapPresence(val) {
 
 module.exports = {
     prefixes: process.env.PREFIX
-        ? process.env.PREFIX.split(',').map(p => p.trim())
+        ? process.env.PREFIX.split('.').map(p => p.trim())
         : [''],
 
-    NUMBER: process.env.YOUR_NUMBER || '254742063632',
+    NUMBER: process.env.YOUR_NUMBER || '2348168000939',
     MODE: (process.env.MODE || 'private').toLowerCase().trim(),
     WARN_LIMIT: process.env.WARNINGS || '3',
-    ON: process.env.YOUR_NAME || 'FLASH-MD',
+    ON: process.env.YOUR_NAME || 'Aura',
     ANTICALL: process.env.ANTICALL || 'on',
     ADM: process.env.ANTIDELETE || 'on',
-    AUTO_VIEW_STATUS: process.env.AUTO_READ_STATUS === 'on',
+    AUTO_VIEW_STATUS: process.env.AUTO_READ_STATUS === 'off',
     AUTO_LIKE: process.env.AUTO_LIKE === 'on',
-    AUTO_READ_MESSAGES: process.env.AUTO_READ_DM === 'on',
+    AUTO_READ_MESSAGES: process.env.AUTO_READ_DM === 'ofg',
     HEROKU_API_KEY: process.env.HEROKU_API_KEY,
     HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
    ALIVE_URL: process.env.ALIVE_URL,
@@ -32,7 +32,7 @@ module.exports = {
     timezone: 'Africa/Nairobi',
     USER_LID: process.env.YOUR_LID || null,
     PRESENCE_DM: mapPresence(process.env.PRESENCE_DM || 'typing'),
-    PRESENCE_GROUP: mapPresence(process.env.PRESENCE_GROUP || 'recording'),
+    PRESENCE_GROUP: mapPresence(process.env.PRESENCE_GROUP || 'typing'),
 
     mapPresence
 };
